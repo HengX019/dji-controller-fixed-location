@@ -1,0 +1,15 @@
+.DS_Store
+.local/
+build/
+*.apk
+*.aab
+*.idsig
+*.jks
+*.keystore
+*.p12
+*.pfx
+.fixed-location-signing.json
+local.properties
+.idea/
+.gradle/
+__pycache__/
