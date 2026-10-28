@@ -13,3 +13,7 @@ local.properties
 .idea/
 .gradle/
 __pycache__/
+
+# Only the two explicitly published APKs
+!downloads/FixedLocation-RCPro2-1.1.0.apk
+!downloads/FixedLocation-RC1-RC2-test.apk

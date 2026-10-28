@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.vitamin.mocklocation.tests">
+    <uses-sdk android:minSdkVersion="30" android:targetSdkVersion="30" />
+    <application android:label="Fixed Location Tests" />
+    <instrumentation android:name="cn.vitamin.mocklocation.tests.SmokeTests"
+        android:targetPackage="cn.vitamin.mocklocation" />
+</manifest>

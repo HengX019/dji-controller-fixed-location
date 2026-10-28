@@ -1,4 +1,19 @@
-# RC Pro 2 定点定位
+# DJI 遥控器定点定位
+
+本仓库包含两个分别维护的版本：
+
+| 版本 | 目标设备 | 系统要求 | 状态 |
+| --- | --- | --- | --- |
+| [RC Pro 2 版](#rc-pro-2-版) | DJI RC Pro 2 | Android 11 | 曾在一台 RC Pro 2 上测试地图和 USB 初始化 |
+| [RC 一代 / RC 2 测试版](versions/rc1-rc2/README.md) | DJI RC 一代、DJI RC 2 | Android 10 及以上 | 已在 Android 11 64 位模拟器测试；尚未在 RC 一代、RC 2 或 32 位系统实测 |
+
+下载：[RC Pro 2 APK](downloads/FixedLocation-RCPro2-1.1.0.apk) · [RC 一代 / RC 2 测试版 APK](downloads/FixedLocation-RC1-RC2-test.apk)。这两个 APK 使用相同的应用包名和发布签名，不能作为两个独立应用同时安装。RC 一代 / RC 2 测试版版本号较高，可以覆盖 RC Pro 2 版；反向安装会被系统视为降级，普通安装可能失败。卸载会移除应用数据；自行构建的 APK 一般使用不同签名，无法直接覆盖。
+
+**RC 一代 / RC 2 的安装与系统权限尚未验证。** DJI 表示 RC 2 不支持安装第三方应用；具体结果取决于设备固件。不要对 RC 一代或 RC 2 使用下面的 RC Pro 2 专用初始化脚本。
+
+飞行前请停止模拟定位，取消模拟应用选择并确认真实定位恢复；不要在连接飞行器或飞行时使用。项目与 DJI 无关联。
+
+## RC Pro 2 版
 
 一个面向 DJI RC Pro 2、Android 11 的免 Root 模拟定位应用。可以输入经纬度或通过地图选择位置，并在后台持续提供固定坐标。项目与 DJI 无关联，也不是官方产品。
 
@@ -24,7 +39,7 @@
 
 ## 构建
 
-需要 Python 3、JDK 11 或更高版本、Android SDK Platform 30、Android SDK Build-Tools 35.0.0 和 platform-tools。源码仓库不包含 Android SDK、adb、签名密钥或已签名 APK。
+需要 Python 3、JDK 11 或更高版本、Android SDK Platform 30、Android SDK Build-Tools 35.0.0 和 platform-tools。源码仓库不包含 Android SDK、adb 或签名密钥；预编译 APK 位于 `downloads/`。
 
 设置 `ANDROID_SDK_ROOT`（或 `ANDROID_HOME`）指向标准 Android SDK 目录，然后运行：
 
